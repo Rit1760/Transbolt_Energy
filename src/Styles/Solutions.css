@@ -1,0 +1,343 @@
+.solutionHero,
+.solutionSection,
+.solutionCTA {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+:root {
+  --primary: #0a2e52;
+  --secondary: #1565c0;
+  --accent: #42a5f5;
+  --orange: #e65100;
+  --text: #263238;
+  --light-text: #546e7a;
+  --white: #ffffff;
+  --bg: #f8fbff;
+  --border: #e6edf5;
+}
+
+
+
+.solutionHero {
+  background: 
+    url("/Images/SB.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.solutionHero h1 {
+  font-size: 4rem;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.solutionHero p {
+  max-width: 850px;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+
+
+.solutionSection {
+  padding: 100px 0;
+  background: white;
+}
+
+.solutionSection:nth-child(even) {
+  background: var(--bg);
+}
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.solutionReverse .solutionImage {
+  order: 2;
+}
+
+.solutionReverse .solutionContent {
+  order: 1;
+}
+
+
+
+.solutionImage img {
+  width: 100%;
+  border-radius: 24px;
+  display: block;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.12),
+    0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+}
+
+.solutionImage img:hover {
+  transform: translateY(-8px);
+}
+
+
+
+.solutionContent span {
+  display: inline-block;
+  background: rgba(21,101,192,0.1);
+  color: var(--secondary);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.solutionContent h2 {
+  font-size: 2.8rem;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.solutionContent p {
+  color: var(--light-text);
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+}
+
+
+
+.processFlow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.stepCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(21,101,192,0.12);
+}
+
+.stepNumber {
+  width: 42px;
+  height: 42px;
+  margin: auto auto 15px;
+  background: var(--secondary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.stepCard p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.metricCard {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f5faff
+  );
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--orange);
+  transition: all 0.3s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.08);
+}
+
+.solutionContent button,
+.solutionCTA button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 16px 34px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.solutionContent button:hover,
+.solutionCTA button:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+.solutionCTA {
+  padding: 120px 0;
+  background:
+    linear-gradient(
+      rgba(10,46,82,0.92),
+      rgba(10,46,82,0.92)
+    ),
+    url("/Images/solutions/cta-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.solutionCTA h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.solutionCTA p {
+  max-width: 750px;
+  margin: auto;
+  color: rgba(255,255,255,0.85);
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+
+
+.solutionSection {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .solutionGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .solutionReverse .solutionImage,
+  .solutionReverse .solutionContent {
+    order: unset;
+  }
+
+  .processFlow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .solutionHero h1 {
+    font-size: 3rem;
+  }
+
+  .solutionContent h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .solutionHero {
+    min-height: 60vh;
+    padding: 60px 0;
+  }
+
+  .solutionHero h1 {
+    font-size: 2.3rem;
+  }
+
+  .solutionHero p {
+    font-size: 1rem;
+  }
+
+  .solutionSection {
+    padding: 70px 0;
+  }
+
+  .solutionContent h2 {
+    font-size: 1.8rem;
+  }
+
+  .processFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutionCTA {
+    padding: 80px 20px;
+  }
+
+  .solutionCTA h2 {
+    font-size: 2rem;
+  }
+
+  .solutionCTA p {
+    font-size: 16px;
+  }
+
+  .solutionContent button,
+  .solutionCTA button {
+    width: 100%;
+  }
+}

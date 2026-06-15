@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+     font-family: 'Poppins';
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x:hidden;
+}
+
+.header{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:999;
+    padding:15px 25px;
+}
+
+.navbar{
+    max-width:1400px;
+    width:100%;
+    margin:auto;
+    height:105px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 45px;
+    border-radius:35px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.15),
+    inset 0 1px 1px rgba(255,255,255,0.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:auto;
+    height:auto;
+    object-fit:contain;
+}
+
+.navLinks{
+    display:flex;
+    align-items:center;
+    gap:55px;
+}
+
+.navLinks a{
+    text-decoration:none;
+    color:#000000;
+    font-size:20px;
+    font-weight:500;
+    transition:.3s;
+    position:relative;
+}
+
+.navLinks a:hover{
+    color:#00d4ff;
+}
+
+.navLinks a::after{
+    content:"";
+    position:absolute;
+    bottom:-8px;
+    left:0;
+    width:0%;
+    height:2px;
+    background:#00d4ff;
+    transition:.3s;
+}
+
+.navLinks a:hover::after{
+    width:100%;
+}
+
+.menuBtn{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    cursor:pointer;
+}
+
+.menuBtn span{
+    width:42px;
+    height:2px;
+    background:#000000;
+    border-radius:10px;
+}
+
+@media(max-width:1200px){
+    .navLinks{
+        gap:35px;
+    }
+    .navLinks a{
+        font-size:18px;
+    }
+}
+
+@media(max-width:992px){
+    .navbar{
+        height:90px;
+        padding:0 25px;
+    }
+    .navLinks{
+        display:none;
+    }
+    .logo img{
+        width:180px !important;
+        height:auto !important;
+    }
+}
+
+@media(max-width:768px){
+    .header{
+        padding:12px;
+    }
+    .navbar{
+        height:80px;
+        border-radius:25px;
+    }
+    .logo img{
+        width:150px !important;
+    }
+    .menuBtn span{
+        width:35px;
+    }
+}
+
+@media(max-width:480px){
+    .navbar{
+        height:70px;
+        padding:0 18px;
+        border-radius:20px;
+    }
+    .logo img{
+        width:130px !important;
+    }
+    .menuBtn span{
+        width:28px;
+    }
+}

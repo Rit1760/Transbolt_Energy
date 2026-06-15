@@ -1,0 +1,309 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+:root {
+  --navy: #0A2E52;
+  --blue: #1565C0;
+  --light-blue: #42A5F5;
+  --green: #1B8A6B;
+  --amber: #E65100;
+  --offwhite: #F4F8FD;
+  --white: #ffffff;
+  --slate: #546E7A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--offwhite);
+   font-family: 'Poppins', sans-serif;
+}
+
+.container_energy {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+.hero_energy {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background:
+    url("/Images/HH1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero_content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero_text {
+  max-width: 760px;
+  color: rgb(0, 0, 0);
+}
+
+.hero_tag {
+  color: #42A5F5;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero_text h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+.hero_text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.hero_buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn_primary {
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn_primary:hover {
+  background: var(--light-blue);
+}
+
+.btn_secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.section_energy {
+  padding: 100px 0;
+}
+
+.section_heading {
+  margin-bottom: 60px;
+}
+
+.section_heading span {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.section_heading h2 {
+  font-size: 42px;
+  margin-top: 10px;
+  color: var(--navy);
+}
+
+.center {
+  text-align: center;
+}
+
+.center p {
+  max-width: 850px;
+  margin: 20px auto 0;
+  color: var(--slate);
+}
+
+
+.benefits_grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.benefit_card {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.benefit_card:hover {
+  transform: translateY(-8px);
+}
+
+.benefit_card span {
+  font-size: 34px;
+}
+
+.benefit_card h3 {
+  margin: 20px 0;
+  color: var(--navy);
+}
+
+.benefit_card p {
+  color: var(--slate);
+  line-height: 1.7;
+}
+
+
+.applications_section {
+  padding: 100px 0;
+  background: white;
+}
+
+.applications_grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.app_card {
+  background: #f8fbff;
+  border-left: 4px solid var(--blue);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.app_card h3 {
+  color: var(--navy);
+  margin-bottom: 15px;
+}
+
+.app_card p {
+  color: var(--slate);
+}
+
+
+.stats_section {
+  background: var(--navy);
+  padding: 90px 0;
+}
+
+.stats_grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.stat_box {
+  text-align: center;
+}
+
+.stat_box h2 {
+  color: #42A5F5;
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.stat_box p {
+  color: white;
+}
+
+
+.cta_section {
+  background: #0A2E52;
+  padding: 80px 0;
+}
+
+.cta_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.cta_content {
+  flex: 1;
+}
+
+.cta_content h2 {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.cta_content p {
+  color: rgba(255,255,255,.85);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.cta_image {
+  flex: 1;
+  text-align: right;
+}
+
+.cta_image img {
+  width: 100%;
+  max-width: 550px;
+}
+
+@media(max-width:992px){
+
+  .benefits_grid,
+  .applications_grid,
+  .stats_grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .cta_wrapper{
+    flex-direction: column;
+    text-align:center;
+  }
+
+  .cta_image{
+    text-align:center;
+  }
+
+  .hero_text h1{
+    font-size:48px;
+  }
+}
+
+@media(max-width:768px){
+
+  .benefits_grid,
+  .applications_grid,
+  .stats_grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero_text h1{
+    font-size:38px;
+  }
+
+  .hero_text p{
+    font-size:16px;
+  }
+
+  .section_heading h2{
+    font-size:32px;
+  }
+
+  .cta_content h2{
+    font-size:32px;
+  }
+}
