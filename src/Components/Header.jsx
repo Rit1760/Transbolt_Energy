@@ -22,7 +22,7 @@ export default function Header() {
 
         <nav className="navLinks">
           <Link href="/">Home</Link>
-          <Link href="/About">About</Link>
+          <Link href="https://www.traansbolt.com/About">About</Link>
           <Link href="/Blog">Blog</Link>
           <Link href="/Solutions">Solutions</Link>
           <Link href="/GetAQuote">Get A Quote</Link>

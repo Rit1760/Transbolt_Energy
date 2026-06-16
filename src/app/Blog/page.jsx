@@ -1,26 +1,3 @@
-// import "../../Styles/Blog.css";
-
-// export default function Blog() {
-//   return (
-// <>
-// <div className="main1_Energy_Blog">
-//   <div className="container1_Energy_Blog">
-//     <div className="row1_Energy_Blog">
-//       <div className="col1_Energy_Blog">
-//         <h5>Blog</h5>
-//       </div>
-//       <div className="col2_Energy_Blog">
-//       </div>
-//     </div>
-//   </div>
-// </div>
-// </>
-//   );
-// }
-
-
-
-
 import "../../Styles/Blog.css";
 
 export default function Blog() {

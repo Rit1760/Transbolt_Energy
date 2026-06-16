@@ -1,30 +1,5 @@
-// import "../../Styles/GetAQuate.css"
-
-
-// export default function GetAQuote() {
-//   return (
-// <>
-// <div className="main1_Energy_GetAQuote">
-//   <div className="container1_Energy_GetAQuote">
-//     <div className="row1_Energy_GetAQuote">
-//       <div className="col1_Energy_GetAQuote">
-//         <h5>Get a Quote</h5>
-//       </div>
-//       <div className="col2_Energy_GetAQuote">
-//       </div>
-//     </div>
-//   </div>
-// </div>
-// </>
-//   );
-// }
-
-
-
-
-
-
 import "../../Styles/GetAQuate.css"
+import Link from "next/link";
 
 export default function GetAQuote() {
   return (
@@ -63,9 +38,9 @@ export default function GetAQuote() {
                 </div>
               </div>
 
-              <button className="quote-btn">
+              <Link href="https://www.traansbolt.com/Contact" className="quote-btn">
                 Get Your Custom Quote →
-              </button>
+              </Link>
             </div>
 
             <div className="col2_Energy_GetAQuote">

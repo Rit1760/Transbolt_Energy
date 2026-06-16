@@ -1,5 +1,6 @@
 
 import "../../Styles/Solutions.css";
+import Link from "next/link";
 
 const solutions = [
   {
@@ -173,7 +174,7 @@ export default function Solution() {
             Speak with our experts and discover how Traansbolt BESS can improve
             efficiency, resilience, and sustainability.
           </p>
-          <button>Talk To Our Experts</button>
+          <Link href="/https://www.traansbolt.com/Contact">Talk To Our Experts</Link>
         </div>
       </section>
     </>
