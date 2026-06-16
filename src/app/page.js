@@ -23,6 +23,7 @@
 
 
 import "../Styles/Home.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -50,9 +51,9 @@ export default function Home() {
             </p>
 
             <div className="hero_buttons">
-              <button className="btn_primary">
+              <Link href="https://www.traansbolt.com/Contact" className="btn_primary">
                 Talk to Our Experts →
-              </button>
+              </Link>
 
               <button className="btn_secondary">
                 Explore Our Products →
@@ -227,9 +228,9 @@ export default function Home() {
               together.
             </p>
 
-            <button className="btn_primary">
+            <Link href="https://www.traansbolt.com/Contact" className="btn_primary">
               Talk to Our Experts →
-            </button>
+            </Link>
           </div>
 
           <div className="cta_image">
