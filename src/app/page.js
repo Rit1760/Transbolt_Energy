@@ -234,7 +234,7 @@ export default function Home() {
 
           <div className="cta_image">
             <img
-              src="/Images/Trans_BESS2.jpeg"
+              src="/Images/trans_BESS2.jpeg"
               alt="Traansbolt BESS"
             />
           </div>
