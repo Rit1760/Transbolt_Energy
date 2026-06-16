@@ -63,7 +63,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY BESS */}
       <section className="section_energy">
         <div className="container_energy">
           <div className="section_heading">
@@ -124,7 +123,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* APPLICATIONS */}
       <section className="applications_section">
         <div className="container_energy">
 
@@ -175,7 +173,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATISTICS */}
       <section className="stats_section">
         <div className="container_energy">
           <div className="stats_grid">
@@ -214,7 +211,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="cta_section">
         <div className="container_energy cta_wrapper">
 
