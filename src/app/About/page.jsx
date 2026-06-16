@@ -131,7 +131,7 @@ export default function AboutUs() {
 
             <div className="leader-image">
               <img
-                src="/images/brijesh1.jpg"
+                src="/Images/brijesh1.jpg"
                 alt="Brijesh Malik"
               />
             </div>
