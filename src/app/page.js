@@ -28,7 +28,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      {/* HERO SECTION */}
+
       <section className="hero_energy">
         <div className="hero_overlay"></div>
 
