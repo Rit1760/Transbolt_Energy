@@ -133,6 +133,9 @@ export default function AboutUs() {
               <Image
                 src="/Images/brijesh1.jpg"
                 alt="Brijesh Malik"
+                width={400}
+                height={650}
+                // priority
               />
             </div>
 

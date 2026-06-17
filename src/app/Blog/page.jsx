@@ -71,7 +71,6 @@ export default function Blog() {
 
       <section className="blogHero">
 
-  {/* Background Image */}
   <Image
     src="/Images/BlogB2.png"
     alt="Traansbolt Blog"
@@ -80,7 +79,6 @@ export default function Blog() {
     className="blogBg"
   />
 
-  {/* Overlay */}
   <div className="blogOverlay"></div>
 
   <div className="blogHeroContent">
