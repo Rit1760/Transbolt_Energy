@@ -20,7 +20,7 @@
 
 
 
-
+import Image from "next/image";
 import "../../Styles/About.css";
 
 export default function AboutUs() {
@@ -130,7 +130,7 @@ export default function AboutUs() {
           <div className="leader-card">
 
             <div className="leader-image">
-              <img
+              <Image
                 src="/Images/brijesh1.jpg"
                 alt="Brijesh Malik"
               />

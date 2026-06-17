@@ -20,7 +20,7 @@
 // }
 
 
-
+import Image from "next/image";
 
 import "../Styles/Home.css";
 import Link from "next/link";
@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
 
-      <section className="hero_energy">
+      {/* <section className="hero_energy">
         <div className="hero_overlay"></div>
 
         <div className="container_energy hero_content">
@@ -61,7 +61,59 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+          <section className="hero_energy">
+
+      {/* Background Image */}
+      <Image
+        src="/Images/HH1.png"
+        alt="Traansbolt Energy"
+        fill
+        priority
+        className="hero_bg"
+      />
+
+      {/* Overlay */}
+      <div className="hero_overlay"></div>
+
+      {/* Content */}
+      <div className="container_energy hero_content">
+        <div className="hero_text">
+          <span className="hero_tag">
+            TRAANSBOLT ENERGY
+          </span>
+
+          <h1>
+            Intelligent Energy Storage
+            <br />
+            for a Resilient Tomorrow
+          </h1>
+
+          <p>
+            From backup power and peak shaving to renewable integration and
+            energy optimisation — Traansbolt Energy delivers scalable BESS
+            solutions engineered for reliability, safety, and performance.
+          </p>
+
+
+          <div className="hero_buttons">
+            <Link
+              href="/Contact"
+              className="btn_primary"
+            >
+              Talk to Our Experts →
+            </Link>
+
+            <button className="btn_secondary">
+              Explore Our Products →
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
       <section className="section_energy">
         <div className="container_energy">
@@ -230,9 +282,11 @@ export default function Home() {
           </div>
 
           <div className="cta_image">
-            <img
+            <Image
               src="/Images/trans_BESS2.jpeg"
               alt="Traansbolt BESS"
+              width={500}
+              height={300}
             />
           </div>
 

@@ -166,6 +166,7 @@
 
 
 import "../../Styles/Products.css";
+import Image from "next/image";
 
 const products = [
   {
@@ -263,9 +264,19 @@ export default function Products() {
               index % 2 === 1 ? "reverse" : ""
             }`}
           >
-            <div className="productImage">
+            {/* <div className="productImage">
               <img src={product.image} alt={product.title} />
-            </div>
+            </div> */}
+
+            <div className="productImage">
+  <Image
+    src={product.image}
+    alt={product.title}
+    fill
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="productImg"
+  />
+</div>
 
             <div className="productInfo">
               <span className="category">

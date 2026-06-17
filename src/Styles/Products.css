@@ -355,7 +355,7 @@ body {
   flex-direction: row-reverse;
 }
 
-.productImage {
+/* .productImage {
   flex: 1;
 }
 
@@ -364,6 +364,27 @@ body {
   border-radius: 20px;
   display: block;
   box-shadow: 0 15px 40px rgba(0,0,0,.15);
+} */
+
+
+
+.productImage {
+  flex: 1;
+  position: relative;
+  min-height: 500px; /* image height */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.productImg {
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,.15);
+  transition: transform 0.5s ease;
+}
+
+.productImage:hover .productImg {
+  transform: scale(1.05);
 }
 
 .productInfo {

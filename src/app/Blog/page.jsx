@@ -1,4 +1,5 @@
 import "../../Styles/Blog.css";
+import Image from "next/image";
 
 export default function Blog() {
   const blogs = [
@@ -48,7 +49,7 @@ export default function Blog() {
 
   return (
     <>
-      <section className="blogHero">
+      {/* <section className="blogHero">
         <div className="blogOverlay"></div>
 
         <div className="blogHeroContent">
@@ -65,7 +66,39 @@ export default function Blog() {
             case studies.
           </p>
         </div>
-      </section>
+      </section> */}
+
+
+      <section className="blogHero">
+
+  {/* Background Image */}
+  <Image
+    src="/Images/BlogB2.png"
+    alt="Traansbolt Blog"
+    fill
+    priority
+    className="blogBg"
+  />
+
+  {/* Overlay */}
+  <div className="blogOverlay"></div>
+
+  <div className="blogHeroContent">
+    <span className="blogTag">Resources & Insights</span>
+
+    <h1>
+      Learn. Calculate.
+      <span> Decide.</span>
+    </h1>
+
+    <p>
+      Everything you need to make smart energy storage decisions —
+      educational guides, industry insights, ROI models and real-world
+      case studies.
+    </p>
+  </div>
+
+</section>
 
       <section className="blogSection">
         <div className="blogContainer">
@@ -78,7 +111,7 @@ export default function Blog() {
             </p>
           </div>
 
-          <div className="blogGrid">
+          {/* <div className="blogGrid">
             {blogs.map((blog, index) => (
               <div className="blogCard" key={index}>
                 <div className="blogImage">
@@ -102,7 +135,50 @@ export default function Blog() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+
+
+
+          <div className="blogGrid">
+  {blogs.map((blog, index) => (
+    <div className="blogCard" key={index}>
+      
+      <div className="blogImageWrapper">
+        {/* <Image
+          src={blog.image}
+          alt={blog.title}
+          fill
+          className="blogImage"
+        /> */}
+
+        <Image
+  src={blog.image}
+  alt={blog.title}
+  fill
+  sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 50vw,
+         33vw"
+  className="blogImage"
+/>
+      </div>
+
+      <div className="blogCardContent">
+        <span className="blogCategory">
+          {blog.category}
+        </span>
+
+        <h3>{blog.title}</h3>
+
+        <p>{blog.desc}</p>
+
+        <div className="blogMeta">
+          <span>{blog.date}</span>
+        </div>
+      </div>
+
+    </div>
+  ))}
+</div>
 
         </div>
       </section>

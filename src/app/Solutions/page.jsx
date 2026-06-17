@@ -1,5 +1,6 @@
 import "../../Styles/Solutions.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const solutions = [
   {
@@ -118,7 +119,7 @@ const solutions = [
 export default function Solution() {
   return (
     <>
-      <section className="solutionHero">
+      {/* <section className="solutionHero">
         <div className="container">
           <h1>Energy Storage Solutions</h1>
           <p>
@@ -126,7 +127,32 @@ export default function Solution() {
             for commercial, industrial and utility-scale applications.
           </p>
         </div>
-      </section>
+      </section> */}
+
+
+      <section className="solutionHero">
+
+  <Image
+    src="/Images/SB.png"
+    alt="Energy Storage Solutions"
+    fill
+    priority
+    sizes="100vw"
+    className="solutionHeroBg"
+  />
+
+  <div className="solutionHeroOverlay"></div>
+
+  <div className="container solutionHeroContent">
+    <h1>Energy Storage Solutions</h1>
+
+    <p>
+      Unlock measurable ROI with advanced Battery Energy Storage Systems
+      for commercial, industrial and utility-scale applications.
+    </p>
+  </div>
+
+</section>
 
       {solutions.map((item, index) => (
         <section
@@ -136,9 +162,18 @@ export default function Solution() {
           }`}
         >
           <div className="container solutionGrid">
-            <div className="solutionImage">
+            {/* <div className="solutionImage">
               <img src={item.image} alt={item.title} />
-            </div>
+            </div> */}
+            <div className="solutionImage">
+  <Image
+    src={item.image}
+    alt={item.title}
+    fill
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="solutionImg"
+  />
+</div>
 
             <div className="solutionContent">
               <span>{item.title}</span>
@@ -165,6 +200,7 @@ export default function Solution() {
           </div>
         </section>
       ))}
+
 
       <section className="solutionCTA">
         <div className="container">

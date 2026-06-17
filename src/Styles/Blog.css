@@ -14,7 +14,7 @@
 
 
 
-.blogHero {
+/* .blogHero {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -72,7 +72,154 @@
   max-width: 700px;
   margin: auto;
    font-family: 'Poppins';
+} */
+
+
+
+
+
+
+
+
+.blogImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
 }
+
+.blogImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blogCard:hover .blogImage {
+  transform: scale(1.08);
+}
+
+.blogCard {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.blogCard:hover {
+  transform: translateY(-8px);
+}
+
+.blogCardContent {
+  padding: 24px;
+}
+
+.blogCategory {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: #eef5ff;
+  color: #0066ff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blogHero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+  overflow: hidden;
+  font-family: 'Poppins';
+}
+
+/* Next Image */
+.blogBg {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* Overlay */
+.blogOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.65) 0%,
+    rgba(0,0,0,0.55) 50%,
+    rgba(0,0,0,0.75) 100%
+  );
+}
+
+.blogHeroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.blogTag {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+  margin-top: 20px;
+  font-family: 'Poppins';
+}
+
+.blogHero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-family: 'Poppins';
+}
+
+.blogHero h1 span {
+  color: #00d4ff;
+}
+
+.blogHero p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: auto;
+  font-family: 'Poppins';
+}
+
+
+
+
+
+
+
+
 
 .blogSection {
   padding: 100px 0;
