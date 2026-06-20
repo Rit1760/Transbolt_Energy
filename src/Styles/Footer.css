@@ -5,10 +5,8 @@
 
 .footer {
   background: #000000;
-  /* background: #071f38; */
   color: #f4f8fd;
   padding-top: 70px;
-  /* margin-top: 100px; */
   font-family: 'Lato', sans-serif;
 }
 
@@ -16,11 +14,9 @@
   width: 90%;
   max-width: 1400px;
   margin: auto;
-
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
   gap: 50px;
-
   padding-bottom: 60px;
 }
 
@@ -150,7 +146,6 @@
   }
 }
 
-/* Mobile */
 
 @media (max-width: 768px) {
   .footer {
