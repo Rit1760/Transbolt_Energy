@@ -377,9 +377,6 @@ export default function AboutUs() {
 
 
 
-
-
-
   <section className="leadership-section2">
         <div className="container">
 

@@ -1,164 +1,150 @@
+
+
+
+
 // import "../../Styles/Products.css";
+// import Image from "next/image";
 
 // const products = [
 //   {
+//     id: 1,
+//     image: "/Images/P1.png",
+//     category: "C&I BESS",
 //     title: "T125KW / 261KWH",
-//     category: "Commercial & Industrial BESS",
-//     description:
-//       "All-in-One integrated energy storage system designed for commercial and industrial facilities with plug-and-play deployment.",
-//     stats: [
+//     desc: "All-in-One Commercial & Industrial Battery Energy Storage System.",
+//     specs: [
 //       "261 kWh Capacity",
 //       "125 kW Output",
 //       "6000+ Cycles",
 //       "IP55 Protection",
 //     ],
 //   },
+
 //   {
-//     title: "1MW / 2MWh",
-//     category: "Containerised Large C&I BESS",
-//     description:
-//       "Fully containerised energy storage solution delivering utility-class performance for large commercial and industrial applications.",
-//     stats: [
-//       "2090 kWh Capacity",
+//     id: 2,
+//     image: "/Images/P2.png",
+//     category: "Large C&I",
+//     title: "1MW / 2MWh System",
+//     desc: "Containerised Large Scale Energy Storage Solution.",
+//     specs: [
+//       "2090 kWh",
 //       "1000 kW Power",
 //       "98.5% Efficiency",
 //       "<20ms Switchover",
 //     ],
 //   },
+
 //   {
-//     title: "2.5MW / 5MWh",
-//     category: "Utility Scale Flagship BESS",
-//     description:
-//       "Grid-scale liquid cooled storage solution engineered for renewable integration, frequency regulation, and utility applications.",
-//     stats: [
-//       "5.01 MWh Capacity",
+//     id: 3,
+//     image: "/Images/P3.png",
+//     category: "Utility Scale",
+//     title: "2.5MW / 5MWh System",
+//     desc: "Flagship Utility Scale Energy Storage Platform.",
+//     specs: [
+//       "5.01 MWh",
 //       "2.5 MW Power",
 //       ">93% Efficiency",
-//       "Seismic Level 8",
+//       "Level 8 Seismic",
 //     ],
 //   },
-//   {
-//     title: "Custom Solutions",
-//     category: "Bespoke BESS Systems",
-//     description:
-//       "Engineered energy storage solutions tailored to your load profile, infrastructure, and commercial objectives.",
-//     stats: [
-//       "100kWh - 50MWh+",
-//       "Multi Container",
-//       "Custom EMS",
-//       "Flexible Financing",
-//     ],
-//   },
-// ];
 
-// const components = [
-//   "Battery Management System (BMS)",
-//   "Energy Management System (EMS)",
-//   "Power Conversion System (PCS)",
-//   "Liquid Cooling System",
-//   "Stat-X Fire Suppression",
-//   "TraansboltConnect™ Monitoring",
-//   "SCADA Integration",
+//   {
+//     id: 4,
+//     image: "/Images/P4.png",
+//     category: "Custom Solutions",
+//     title: "Custom BESS",
+//     desc: "Tailor-made Battery Energy Storage Systems for any project size.",
+//     specs: [
+//       "100kWh-50MWh+",
+//       "Custom EMS",
+//       "Multi Container",
+//       "Scalable",
+//     ],
+//   },
 // ];
 
 // export default function Products() {
 //   return (
 //     <>
-//       {/* Hero Section */}
 //       <section className="productsHero">
-//         <div className="overlay"></div>
+//         <div className="heroOverlay"></div>
 
 //         <div className="heroContent">
-//           <span className="heroTag">
-//             OUR BESS PRODUCT PORTFOLIO
-//           </span>
+//           <span>OUR BESS PRODUCT PORTFOLIO</span>
 
 //           <h1>
 //             Engineered Storage Solutions
-//             <span> Built for Every Scale of Ambition</span>
+//             <br />
+//             Built For Every Scale
 //           </h1>
 
 //           <p>
-//             Every Traansbolt Energy system is a fully integrated solution —
-//             battery, BMS, PCS, EMS, thermal management and fire suppression,
-//             designed and supported by our engineering team from day one.
+//             Integrated Battery Energy Storage Systems engineered for
+//             Commercial, Industrial and Utility Scale applications.
 //           </p>
 //         </div>
 //       </section>
 
-//       {/* Products Section */}
 //       <section className="productsSection">
-//         <div className="sectionHeader">
-//           <h2>BESS Hardware Products</h2>
+//         <div className="sectionTitle">
+//           <h2>Battery Energy Storage Systems</h2>
 //           <p>
-//             Containerised LiFePO4 Energy Storage Systems from
-//             Commercial Scale to Utility Scale.
+//             Explore Traansbolt Energy's complete range of integrated
+//             Battery Energy Storage Systems.
 //           </p>
 //         </div>
 
-//         <div className="productGrid">
-//           {products.map((item, index) => (
-//             <div className="productCard" key={index}>
-//               <span className="productCategory">
-//                 {item.category}
+//         {products.map((product, index) => (
+//           <div
+//             key={product.id}
+//             className={`productRow ${
+//               index % 2 === 1 ? "reverse" : ""
+//             }`}
+//           >
+
+//             <div className="productImage">
+//   <Image
+//     src={product.image}
+//     alt={product.title}
+//     fill
+//     sizes="(max-width: 768px) 100vw, 50vw"
+//     className="productImg"
+//   />
+// </div>
+
+//             <div className="productInfo">
+//               <span className="category">
+//                 {product.category}
 //               </span>
 
-//               <h3>{item.title}</h3>
+//               <h2>{product.title}</h2>
 
-//               <p>{item.description}</p>
+//               <p>{product.desc}</p>
 
-//               <div className="statsGrid">
-//                 {item.stats.map((stat, i) => (
-//                   <div key={i} className="statItem">
-//                     {stat}
+//               <div className="specGrid">
+//                 {product.specs.map((spec, i) => (
+//                   <div key={i} className="specCard">
+//                     {spec}
 //                   </div>
 //                 ))}
 //               </div>
 
-//               <button>Learn More</button>
+//               <button>
+//                 Learn More →
+//               </button>
 //             </div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* Technology Stack */}
-//       <section className="technologySection">
-//         <div className="sectionHeader">
-//           <h2>Technology Stack</h2>
-//           <p>
-//             The integrated technology inside every Traansbolt Energy
-//             deployment.
-//           </p>
-//         </div>
-
-//         <div className="componentGrid">
-//           {components.map((item, index) => (
-//             <div className="componentCard" key={index}>
-//               <h4>{item}</h4>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* CTA */}
-//       <section className="productsCTA">
-//         <div className="ctaBox">
-//           <h2>
-//             Not Sure Which System Is Right For Your Facility?
-//           </h2>
-
-//           <p>
-//             Our engineers analyse your load profile, tariff structure and
-//             operational requirements to recommend the ideal Battery Energy
-//             Storage System with a complete financial model.
-//           </p>
-
-//           <button>Get Free Energy Assessment</button>
-//         </div>
+//           </div>
+//         ))}
 //       </section>
 //     </>
 //   );
 // }
+
+
+
+
+
+
 
 
 
@@ -226,6 +212,61 @@ const products = [
   },
 ];
 
+
+
+
+const technologies = [
+  {
+    id: 5,
+    image: "/Images/EMS.png",
+    category: "ENERGY MANAGEMENT SYSTEM",
+    title: "EMS – The Brain Behind Every Decision",
+    desc: "The Energy Management System transforms a battery into an intelligent energy asset. Running on the MG500-C edge controller, it collects real-time system data, communicates with the grid, reads tariff signals, and continuously optimises charge/discharge decisions to maximise financial returns.",
+    specs: [
+      "AI Scheduling",
+      "Peak Shaving",
+      "Remote Monitoring",
+      "IEC 61850 Support",
+    ],
+  },
+
+  {
+    id: 6,
+    image: "/Images/BMS.png",
+    category: "BATTERY MANAGEMENT SYSTEM",
+    title: "BMS – Cell-Level Intelligence",
+    desc: "The Battery Management System monitors every battery cell in real time, preventing overcharge, over-discharge, overcurrent, and thermal anomalies while ensuring maximum safety, performance, and lifespan.",
+    specs: [
+      "SOC / SOH",
+      "Active Balancing",
+      "CAN & RS485",
+      "Thermal Protection",
+    ],
+  },
+
+  {
+    id: 7,
+    image: "/Images/PCS.png",
+    category: "POWER CONVERSION SYSTEM",
+    title: "PCS – Where DC Becomes AC",
+    desc: "High-efficiency bidirectional power conversion with grid-forming capability, fast response times, reactive power compensation, and full support for Indian grid code requirements.",
+    specs: [
+      "98.5% Efficiency",
+      "<20ms Response",
+      "Grid Forming",
+      "IP54 Rated",
+    ],
+  },
+];
+
+
+
+
+
+
+
+
+
 export default function Products() {
   return (
     <>
@@ -264,9 +305,6 @@ export default function Products() {
               index % 2 === 1 ? "reverse" : ""
             }`}
           >
-            {/* <div className="productImage">
-              <img src={product.image} alt={product.title} />
-            </div> */}
 
             <div className="productImage">
   <Image
@@ -302,6 +340,72 @@ export default function Products() {
           </div>
         ))}
       </section>
+
+
+
+
+
+<section className="productsSection">
+
+  {/* <div className="sectionTitle">
+    <h2>Core Technologies</h2>
+
+    <p>
+      Advanced EMS, BMS and PCS technologies powering every
+      Traansbolt Battery Energy Storage System.
+    </p>
+  </div> */}
+
+  {technologies.map((tech, index) => (
+    <div
+      key={tech.id}
+      className={`productRow ${
+        index % 2 === 1 ? "reverse" : ""
+      }`}
+    >
+      <div className="productImage">
+        <Image
+          src={tech.image}
+          alt={tech.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="productImg"
+        />
+      </div>
+
+      <div className="productInfo">
+
+        <span className="category">
+          {tech.category}
+        </span>
+
+        <h2>{tech.title}</h2>
+
+        <p>{tech.desc}</p>
+
+        <div className="specGrid">
+          {tech.specs.map((spec, i) => (
+            <div key={i} className="specCard">
+              {spec}
+            </div>
+          ))}
+        </div>
+
+        
+              <button>
+                Learn More →
+              </button>
+
+      </div>
+    </div>
+  ))}
+</section>
+
+
+
+
+
+
     </>
   );
 }
