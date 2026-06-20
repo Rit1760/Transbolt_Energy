@@ -194,6 +194,7 @@ body {
 .hero_text {
   max-width: 700px;
   color: #111;
+  margin-top: 50px;
 }
 
 .hero_tag {

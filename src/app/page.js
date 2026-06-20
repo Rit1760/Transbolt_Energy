@@ -99,12 +99,12 @@ export default function Home() {
 
 
           <div className="hero_buttons">
-            <Link
+            {/* <Link
               href="/Contact"
               className="btn_primary"
             >
               Talk to Our Experts →
-            </Link>
+            </Link> */}
 
             <button className="btn_secondary">
               Explore Our Products →
