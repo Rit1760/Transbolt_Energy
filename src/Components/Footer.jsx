@@ -94,8 +94,8 @@ export default function Footer() {
             +91 99712 37771
           </a>
 
-          <a href="mailto:info@traansbolt-energy.com">
-            info@traansbolt-energy.com
+          <a href="info@transbolt.com">
+            info@transbolt.com
           </a>
 
           {/* <button className="footer_btn">
