@@ -84,90 +84,11 @@
 
 "use client";
 
-import { useState } from "react";
-
-
-
 import "../../Styles/GetAQuate.css"
 import Link from "next/link";
 
 
-
-
-
 export default function GetAQuote() {
-
-
-const [formData, setFormData] = useState({
-  storageSize: "",
-  duration: "",
-  primaryUseCase: "",
-  location: "",
-  deliveryDate: "",
-  projectDetails: "",
-
-  firstName: "",
-  lastName: "",
-  title: "",
-  phone: "",
-  email: "",
-  company: "",
-  industry: "",
-
-  referralSource: "",
-});
-
-const handleChange = (e) => {
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value,
-  });
-};
-
-
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const res = await fetch("/api/quote", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await res.json();
-
-    if (res.ok) {
-      alert("Quote Submitted Successfully!");
-
-      setFormData({
-        storageSize: "",
-        duration: "",
-        primaryUseCase: "",
-        location: "",
-        deliveryDate: "",
-        projectDetails: "",
-        firstName: "",
-        lastName: "",
-        title: "",
-        phone: "",
-        email: "",
-        company: "",
-        industry: "",
-        referralSource: "",
-      });
-    } else {
-      alert(data.message);
-    }
-  } catch (error) {
-    console.log(error);
-    alert("Something went wrong");
-  }
-};
-
 
   return (
     <>
@@ -214,11 +135,8 @@ const handleSubmit = async (e) => {
 
 
 
-{/* <div className="quote-card quote-form-card"> */}
-<form
-  className="quote-card quote-form-card"
-  onSubmit={handleSubmit}
->
+<div className="quote-card quote-form-card">
+
 
 
   <h3>TELL US ABOUT YOUR PROJECT</h3>
@@ -227,23 +145,15 @@ const handleSubmit = async (e) => {
 
     <div className="form-group">
       <label>Size Of Storage (MW) *</label>
-      {/* <input type="text" placeholder="0 MW" /> */}
-      <input
-  type="text"
-  name="storageSize"
-  value={formData.storageSize}
-  onChange={handleChange}
-  placeholder="0 MW"
-/>
+      <input type="text" placeholder="0 MW" />
+
     </div>
 
     <div className="form-group">
       <label>Duration *</label>
+
       <input
   type="text"
-  name="duration"
-  value={formData.duration}
-  onChange={handleChange}
   placeholder="0 MWh"
 />
     </div>
@@ -254,14 +164,12 @@ const handleSubmit = async (e) => {
 
 <select
   name="primaryUseCase"
-  value={formData.primaryUseCase}
-  onChange={handleChange}
 >
-  <option value="">Select One</option>
-  <option value="Peak Shaving">Peak Shaving</option>
-  <option value="Load Shifting">Load Shifting</option>
-  <option value="Solar Integration">Solar Integration</option>
-  <option value="Backup Power">Backup Power</option>
+  <option >Select One</option>
+  <option>Peak Shaving</option>
+  <option >Load Shifting</option>
+  <option >Solar Integration</option>
+  <option >Backup Power</option>
 </select>
 
     </div>
@@ -270,9 +178,6 @@ const handleSubmit = async (e) => {
       <label>Location (city, state, utility co./ISO) *</label>
       <input
   type="text"
-  name="location"
-  value={formData.location}
-  onChange={handleChange}
   placeholder="City, State, Utility Co./ISO"
 />
     </div>
@@ -281,9 +186,6 @@ const handleSubmit = async (e) => {
       <label>Delivery Date *</label>
       <input
   type="date"
-  name="deliveryDate"
-  value={formData.deliveryDate}
-  onChange={handleChange}
 />
     </div>
 
@@ -293,9 +195,6 @@ const handleSubmit = async (e) => {
     <label>Details About Project:</label>
     <textarea
       rows="5"
-      name="projectDetails"
-      value={formData.projectDetails}
-      onChange={handleChange}
       placeholder="Tell Us About Your Project..."
     ></textarea>
   </div>
@@ -308,9 +207,6 @@ const handleSubmit = async (e) => {
       <label>First Name *</label>
       <input
   type="text"
-  name="firstName"
-  value={formData.firstName}
-  onChange={handleChange}
   placeholder="First Name"
 />
     </div>
@@ -319,9 +215,6 @@ const handleSubmit = async (e) => {
       <label>Last Name *</label>
       <input
   type="text"
-  name="lastName"
-  value={formData.lastName}
-  onChange={handleChange}
   placeholder="Last Name"
 />
     </div>
@@ -330,9 +223,6 @@ const handleSubmit = async (e) => {
       <label>Title *</label>
       <input
   type="text"
-  name="title"
-  value={formData.title}
-  onChange={handleChange}
   placeholder="Job Title"
 />
     </div>
@@ -341,9 +231,6 @@ const handleSubmit = async (e) => {
       <label>Phone *</label>
       <input
   type="text"
-  name="phone"
-  value={formData.phone}
-  onChange={handleChange}
   placeholder="+91 1234567890"
 />
     </div>
@@ -352,9 +239,6 @@ const handleSubmit = async (e) => {
       <label>Email *</label>
       <input
   type="email"
-  name="email"
-  value={formData.email}
-  onChange={handleChange}
   placeholder="name@example.com"
 />
     </div>
@@ -363,9 +247,6 @@ const handleSubmit = async (e) => {
       <label>Company *</label>
       <input
   type="text"
-  name="company"
-  value={formData.company}
-  onChange={handleChange}
   placeholder="Company Name"
 />
     </div>
@@ -374,8 +255,6 @@ const handleSubmit = async (e) => {
       <label>Industry *</label>
       <select
   name="industry"
-  value={formData.industry}
-  onChange={handleChange}
 >
         <option>Select your Industry</option>
       </select>
@@ -391,28 +270,16 @@ const handleSubmit = async (e) => {
     <label>Referral Source</label>
     <select
   name="referralSource"
-  value={formData.referralSource}
-  onChange={handleChange}
 >
       <option>None</option>
     </select>
   </div>
 
-  {/* <button className="submit-btn">
+  <button className="submit-btn">
     Get My Quote
-  </button> */}
+  </button>
 
-  <button
-  type="submit"
-  className="submit-btn"
->
-  Get My Quote
-</button>
-
-</form>
-
-
-{/* </form> */}
+            </div>
             </div>
           </div>
         </div>
