@@ -389,7 +389,7 @@ export default function AboutUs() {
 
             <div className="leader-image">
               <Image
-                src="/Images/Arnav.png"
+                src="/Images/ArAi.jpeg"
                 alt="Arnav Malik"
                 width={400}
                 height={650}
